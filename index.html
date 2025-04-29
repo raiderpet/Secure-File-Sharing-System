@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureShare - Encrypted File Sharing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shield-alt"></i> SecureShare</h1>
+            <p>Military-Grade Secure File Sharing</p>
+        </header>
+
+        <div class="auth-section" id="auth-section">
+            <h2>Secure Login</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="file-section hidden" id="file-section">
+            <div class="upload-area">
+                <h2>Upload File</h2>
+                <div class="drop-zone" id="drop-zone">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & Drop files here or click to select</p>
+                    <input type="file" id="file-input" multiple>
+                </div>
+            </div>
+
+            <div class="files-list">
+                <h2>Secure Files</h2>
+                <div id="files-container">
+                    <!-- Files will be listed here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="audit-log">
+            <h2>Activity Log</h2>
+            <div id="log-container">
+                <!-- Audit logs will appear here -->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
